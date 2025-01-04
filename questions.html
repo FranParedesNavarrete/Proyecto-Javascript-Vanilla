@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Pantalla3</title>
+</head>
+<body>
+    <div class="content" id="form">
+        <div class="questions" id="questions">
+            <form class="area" id="questionsForm">
+                <label for="question">Pregunta </label>
+                <input type="text" name="question" id="question">
+                <br>
+                <br>
+                <label for="true">Verdadero </label>
+                <input type="radio" name="answer" id="answerTrue" value="Verdadero">
+                <label for="false">Falso </label>
+                <input type="radio" name="answer" id="answerFalse" value="Falso">
+                <br>
+                <br>
+                <label for="score">Puntuación </label>
+                <input type="text" name="score" id="score">
+                <br>
+                <br>
+                <input type="button" value="Atrás" id="return">
+                <input type="button" value="Grabar" id="record">
+            </form>
+            <div class="area" id="questionsList">
+                <table id="table">
+
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+}
+
+* {
+    font-size: 100%;
+}
+
+input {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#questionsButton {
+    padding: 50px;
+    position: fixed;
+    right: 10vw;
+    bottom: 10vh;
+    background-color: orange;
+    border-radius: 2vw;
+}
+
+.error {
+    background-color: rgba(232, 76, 76, 0.813);
+    padding: 5px;
+    border-radius: 2vw;
+}
+
+.area {
+    border: 1px solid black;
+    padding: 15px;
+}
+
+.questions {
+    display: flex;
+    gap: 2vw;
+    font-size: 90%;
+}
