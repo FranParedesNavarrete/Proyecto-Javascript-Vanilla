@@ -146,6 +146,7 @@ function showQuestions (user, bool = false) {
     let questions = userDataJSON[user].questions;
 
     if (!bool) {
+        loadingMessage.remove();
         questionRow = document.createElement('tr');
         questionRow.innerHTML += '<td>' + 'Pregunta' + '</td>';
         questionRow.innerHTML += '<td>' + 'Respuesta' + '</td>';
@@ -215,11 +216,30 @@ if (questions) {
         let regexScore = /^[0-9]{1}$/;
         showQuestions(email, true);
 
+        document.addEventListener('DOMContentLoaded', function () {
+            let questionField = document.getElementById('question').value;
+            let answer = document.querySelector('input[name="answer"]');
+            let score = document.getElementById('score').value;
+            let empty = false;
+
+            if (answer) {
+                answer = answer.value;
+            } else {
+                answer = '';
+            }
+
+            if (questionField == '' || score == '' || !answer) {
+                document.getElementById('record').disabled = true;
+            } else {
+                document.getElementById('record').disabled = false;
+            }
+
+        });
+
         document.getElementById('record').addEventListener('click', function (event) {
             let questionField = document.getElementById('question').value;
             let answer = document.querySelector('input[name="answer"]:checked').value;
             let score = document.getElementById('score').value;
-    
             if (questionField !=='' && score !== '') {
                 if (regexScore.test(document.getElementById('score').value)) {
                     showQuestion(email, questionField, answer, score);
