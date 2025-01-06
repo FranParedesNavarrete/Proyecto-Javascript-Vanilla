@@ -23,3 +23,6 @@ function getCookie(cname) {
 function deleteCookie(cname) { 
     document.cookie = cname+'=; expires=Thu, 01 Jan 1970 00:00:01 GMT;path=/'; 
 }
+
+let error = document.createElement('div');
+error.className = 'error';
